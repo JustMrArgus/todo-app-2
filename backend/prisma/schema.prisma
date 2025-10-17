@@ -9,6 +9,25 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = "../data/data.db"
+  provider = "sqlite"
+  url      = "file:../data/data.db"
+}
+
+enum Status {
+  DONE
+  NOTDONE
+}
+
+model Todo {
+  id          Int       @id @default(autoincrement())
+  name        String
+  status      Status    @default(NOTDONE)
+  categoryId  Int
+  category    Category  @relation(fields: [categoryId], references: [id])
+}
+
+model Category {
+  id    Int     @id @default(autoincrement())
+  name  String
+  todos Todo[]
 }
