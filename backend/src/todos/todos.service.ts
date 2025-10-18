@@ -31,7 +31,12 @@ export class TodosService {
     });
   }
 
-  async update(id: number, status: Status, name: string, categoryId: number) {
+  async update(
+    id: number,
+    status?: Status,
+    name?: string,
+    categoryId?: number,
+  ) {
     const todo = await this.prisma.todo.findUnique({ where: { id } });
     if (!todo) throw new NotFoundException('Todo not found');
 
