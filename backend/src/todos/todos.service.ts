@@ -31,18 +31,13 @@ export class TodosService {
     });
   }
 
-  async update(
-    id: number,
-    status?: Status,
-    name?: string,
-    categoryId?: number,
-  ) {
+  async update(id: number, status: Status) {
     const todo = await this.prisma.todo.findUnique({ where: { id } });
     if (!todo) throw new NotFoundException('Todo not found');
 
     return this.prisma.todo.update({
       where: { id },
-      data: { status, name, categoryId },
+      data: { status },
     });
   }
 

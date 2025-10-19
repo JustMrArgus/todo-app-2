@@ -29,12 +29,7 @@ export class TodosController {
 
   @Patch(':id')
   update(@Param('id', ParseIntPipe) id: number, @Body() body: UpdateTodoDto) {
-    return this.todosService.update(
-      id,
-      body.status,
-      body.name,
-      body.categoryId,
-    );
+    return this.todosService.update(id, body.status);
   }
 
   @Delete(':id')
