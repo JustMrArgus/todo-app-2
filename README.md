@@ -2,8 +2,8 @@
 
 You can access the live application's parts here:
 
-- **[Backend](https://your-deployment-link.com)**
-- **[Frontend](https://your-deployment-link.com)**
+- **[Backend](https://todo-app-2-1qr7.onrender.com)**
+- **[Frontend](https://justmrargus.github.io/todo-app-2/)**
 
 ## Tech Stack
 
@@ -22,7 +22,6 @@ You can access the live application's parts here:
 1.  **Navigate to the backend directory:**
 
     ```bash
-
     cd backend
     ```
 
