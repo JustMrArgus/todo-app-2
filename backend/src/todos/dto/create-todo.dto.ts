@@ -1,4 +1,11 @@
-import { IsNotEmpty, IsInt, Min, MaxLength, IsEnum } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsInt,
+  Min,
+  MaxLength,
+  IsEnum,
+  IsOptional,
+} from 'class-validator';
 import { Status } from '@prisma/client';
 
 export class CreateTodoDto {
@@ -11,5 +18,6 @@ export class CreateTodoDto {
   categoryId: number;
 
   @IsEnum(Status, { message: 'Invalid status value' })
+  @IsOptional()
   status: Status;
 }
