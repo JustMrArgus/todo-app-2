@@ -5,6 +5,8 @@ You can access the live application's parts here:
 - **[Backend](https://todo-app-2-1qr7.onrender.com)**
 - **[Frontend](https://justmrargus.github.io/todo-app-2/)**
 
+**IMPORTANT: Run the deployed API first before accessing the deployed frontend.**
+
 ## Tech Stack
 
 - **Backend:** [NestJS](https://nestjs.com/), TypeScript
